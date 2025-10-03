@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,8 +64,9 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Theme Toggle & CTA */}
+          <div className="hidden md:flex items-center gap-4">
+            <ThemeToggle />
             <Button
               className="bg-gradient-to-r from-primary to-primary-glow hover:shadow-[var(--shadow-glow)] transition-all duration-300"
             >
@@ -107,6 +109,9 @@ const Navigation = () => {
                   {link.name}
                 </Link>
               ))}
+              <div className="flex items-center justify-center py-2">
+                <ThemeToggle />
+              </div>
               <Button className="w-full bg-gradient-to-r from-primary to-primary-glow">
                 Get Started
               </Button>

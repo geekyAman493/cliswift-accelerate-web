@@ -28,11 +28,11 @@ const FloatingCube = ({ position, scale, speed, color }: any) => {
         <meshStandardMaterial
           color={color}
           transparent
-          opacity={0.3}
+          opacity={0.4}
           metalness={0.9}
           roughness={0.1}
           emissive={color}
-          emissiveIntensity={0.5}
+          emissiveIntensity={0.8}
         />
       </mesh>
       {/* Wireframe overlay */}
@@ -79,8 +79,8 @@ const ParticleGrid = () => {
         />
       </bufferGeometry>
       <pointsMaterial
-        size={0.05}
-        color="#3730A3"
+        size={0.08}
+        color="#6366F1"
         transparent
         opacity={1}
         sizeAttenuation
@@ -102,11 +102,11 @@ const Hero3D = () => {
         <ParticleGrid />
         
         {/* Floating geometric cubes */}
-        <FloatingCube position={[-2, 0, 0]} scale={0.8} speed={0.5} color="#4338CA" />
-        <FloatingCube position={[2, 0.5, -1]} scale={0.6} speed={0.7} color="#4F46E5" />
-        <FloatingCube position={[0, -1, 1]} scale={0.5} speed={0.6} color="#0891B2" />
-        <FloatingCube position={[-1, 1.5, -2]} scale={0.4} speed={0.8} color="#3730A3" />
-        <FloatingCube position={[1.5, -0.5, 2]} scale={0.45} speed={0.65} color="#0E7490" />
+        <FloatingCube position={[-2, 0, 0]} scale={0.8} speed={0.5} color="#6366F1" />
+        <FloatingCube position={[2, 0.5, -1]} scale={0.6} speed={0.7} color="#8B5CF6" />
+        <FloatingCube position={[0, -1, 1]} scale={0.5} speed={0.6} color="#14B8A6" />
+        <FloatingCube position={[-1, 1.5, -2]} scale={0.4} speed={0.8} color="#7C3AED" />
+        <FloatingCube position={[1.5, -0.5, 2]} scale={0.45} speed={0.65} color="#06B6D4" />
       </Canvas>
     </div>
   );
